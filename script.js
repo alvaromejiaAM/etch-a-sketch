@@ -5,7 +5,7 @@
       const row = document.createElement('div');
       row.classList.add('row');
 
-      for(let i = 0; i < 16; i++){ //add squares to column
+      for(let i = 0; i < 16; i++){ //add squares as columns
         const squares = document.createElement('div');
         squares.classList.add('squares');
         row.appendChild(squares);
@@ -28,7 +28,7 @@
       const row = document.createElement('div');
       row.classList.add('row');
 
-      for(let i = 0; i < size; i++){ //add squares to column
+      for(let i = 0; i < size; i++){ //add squares as columns
         const squares = document.createElement('div');
         squares.classList.add('squares');
         row.appendChild(squares);
