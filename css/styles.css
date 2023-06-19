@@ -4,6 +4,7 @@ html, body{
   justify-content: center;
   align-items: center;
   margin: 0;
+  padding: 0;
   height: 100%;
 }
 
@@ -12,5 +13,16 @@ html, body{
   height: 960px;
   border: 6px #374649 solid;
   display: flex;
-  
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.squares{
+  border: 4px #686b6b solid;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px;
+  padding: 0px;
+  flex: 1;
 }
