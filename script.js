@@ -44,8 +44,6 @@
   }
 
   function colorSquare(){ //Square coloring
-    let randomHex = (Math.random() * (1000000 - 100000) + 100000);
-    console.log(randomHex);
 
     squares = document.querySelectorAll('.squares');
 
