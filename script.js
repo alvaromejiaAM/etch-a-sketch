@@ -44,11 +44,13 @@
   }
 
   function colorSquare(){ //Square coloring
+    let randomHex = (Math.random() * (1000000 - 100000) + 100000);
+    console.log(randomHex);
+
     squares = document.querySelectorAll('.squares');
 
     for (let i = 0; i < squares.length; i++){
       squares[i].addEventListener('mouseover', () => {
-        console.log(i);
       squares[i].style.backgroundColor = 'black'; //square goes to black
 
       })  
