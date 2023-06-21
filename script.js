@@ -10,7 +10,6 @@
         squares.classList.add('squares');
         row.appendChild(squares);
       }
-
       container.appendChild(row);
     }
 
@@ -35,6 +34,8 @@
       }
 
       container.appendChild(row);
+      colorSquare();//Recalls to allow square coloring
+
     }
     }
     else{
@@ -42,8 +43,22 @@
     }
   }
 
+  function colorSquare(){ //Square coloring
+    squares = document.querySelectorAll('.squares');
+
+    for (let i = 0; i < squares.length; i++){
+      squares[i].addEventListener('mouseover', () => {
+        console.log(i);
+      squares[i].style.backgroundColor = 'black'; //square goes to black
+
+      })  
+    }
+
+  }
 createGrid();
+colorSquare();
 
 //Prompt change in grid size on click
 const sizeBtn = document.querySelector('.size');
 sizeBtn.addEventListener('click', () => createUserGrid());
+
