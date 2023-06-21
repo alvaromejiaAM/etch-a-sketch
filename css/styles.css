@@ -6,6 +6,35 @@ html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #b52d1b;
+}
+
+#pageTitle{
+  color: #dfc118;
+  text-align: center;
+}
+
+.circle{
+  height: 150px;
+  width: 150px;
+  background-color: #f5ebeb;
+  border-radius: 50%;
+}
+
+.nobs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1250px;
+  height: auto;
+}
+.size{
+  padding: 10px 20px;
+  color: white;
+  background-color: #374649;
+  border: #374649 ;
+  border-radius: 5px;
 }
 
 .container{
@@ -15,6 +44,8 @@ html, body{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: white;
+  flex: 1 0 auto;
 }
 
 .row{
