@@ -34,7 +34,7 @@
       }
 
       container.appendChild(row);
-      colorSquare();//Recalls to allow square coloring
+      colorSquareBlack();//Recalls to allow square coloring
 
     }
     }
@@ -43,21 +43,50 @@
     }
   }
 
-function colorSquare(){ //Square coloring
+function colorSquareBlack(){ //Black color
   squares = document.querySelectorAll('.squares');
   for (let i = 0; i < squares.length; i++){
     squares[i].addEventListener('mouseover', () => {
-      let randomHex = Math.floor(Math.random() * (1000000 - 100000) + 100000);
-      squares[i].style.backgroundColor = `#${randomHex}`;//square goes to black
+      squares[i].style.backgroundColor = 'black';//square goes to black
     
     })  
    }
   }
 
+  function colorSquareRandom(){ //Random colors
+    squares = document.querySelectorAll('.squares');
+    for (let i = 0; i < squares.length; i++){
+      squares[i].addEventListener('mouseover', () => {
+        let randomHex = Math.floor(Math.random() * (1000000 - 100000) + 100000);
+        squares[i].style.backgroundColor = `#${randomHex}`;//square goes to black
+      
+      })  
+     }
+    }
+
+    function removeColors(){
+      squares = document.querySelectorAll('.squares');
+      for (let i = 0; i < squares.length; i++){
+        squares[i].style.backgroundColor = 'white'; //Turns all squares white
+      }
+    }
+
 createGrid();
-colorSquare();
+colorSquareBlack();
+
+//Changes color to black
+const blackBtn = document.querySelector('.blackBtn');
+blackBtn.addEventListener('click', () => colorSquareBlack());
+
+//Changes color to random
+const randomBtn = document.querySelector('.randomBtn');
+randomBtn.addEventListener('click', () => colorSquareRandom());
 
 //Prompt change in grid size on click
 const sizeBtn = document.querySelector('.size');
 sizeBtn.addEventListener('click', () => createUserGrid());
+
+//Turns background color to white
+const eraseBtn = document.querySelector('.removeBtn')
+eraseBtn.addEventListener('click', () => removeColors());
 
