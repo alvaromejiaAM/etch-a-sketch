@@ -43,18 +43,17 @@
     }
   }
 
-  function colorSquare(){ //Square coloring
-
-    squares = document.querySelectorAll('.squares');
-
-    for (let i = 0; i < squares.length; i++){
-      squares[i].addEventListener('mouseover', () => {
-      squares[i].style.backgroundColor = 'black'; //square goes to black
-
-      })  
-    }
-
+function colorSquare(){ //Square coloring
+  squares = document.querySelectorAll('.squares');
+  for (let i = 0; i < squares.length; i++){
+    squares[i].addEventListener('mouseover', () => {
+      let randomHex = Math.floor(Math.random() * (1000000 - 100000) + 100000);
+      squares[i].style.backgroundColor = `#${randomHex}`;//square goes to black
+    
+    })  
+   }
   }
+
 createGrid();
 colorSquare();
 
